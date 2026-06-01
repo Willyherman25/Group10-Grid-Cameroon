@@ -1,0 +1,4 @@
+project_id = "odejnxthlklnhwhdetzz"
+
+[functions.ai-grid-analysis]
+verify_jwt = false

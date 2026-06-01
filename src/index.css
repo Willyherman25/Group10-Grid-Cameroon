@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Grid Cameroon — ENEO-style utility design system.
+   Palette: light green, light blue, white. All colors HSL. */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 215 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 35% 15%;
+
+    /* Primary: trustworthy utility blue */
+    --primary: 205 80% 38%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 200 90% 55%;
+
+    /* Secondary: energy green (CTA / accents) */
+    --secondary: 145 60% 38%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Soft surfaces */
+    --muted: 200 40% 96%;
+    --muted-foreground: 215 20% 40%;
+
+    --accent: 145 55% 92%;
+    --accent-foreground: 145 60% 25%;
+
+    --soft-blue: 205 70% 95%;
+    --soft-green: 145 55% 94%;
+
+    --destructive: 0 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 145 60% 38%;
+    --success-foreground: 0 0% 100%;
+
+    --border: 205 30% 88%;
+    --input: 205 30% 88%;
+    --ring: 205 80% 38%;
+
+    --radius: 0.625rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(205 80% 38% / 0.92), hsl(145 60% 38% / 0.85));
+    --gradient-soft: linear-gradient(180deg, hsl(var(--soft-blue)), hsl(0 0% 100%));
+    --gradient-brand: linear-gradient(90deg, hsl(205 80% 38%), hsl(145 60% 38%));
+
+    --shadow-sm: 0 1px 2px hsl(205 40% 20% / 0.06);
+    --shadow-md: 0 6px 20px -8px hsl(205 50% 25% / 0.18);
+    --shadow-lg: 0 20px 40px -15px hsl(205 60% 25% / 0.25);
+
+    --transition-base: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 215 35% 8%;
+    --foreground: 0 0% 98%;
+    --card: 215 30% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 30% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 200 90% 55%;
+    --primary-foreground: 215 35% 10%;
+    --secondary: 145 55% 50%;
+    --secondary-foreground: 215 35% 10%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 70%;
+    --accent: 145 40% 20%;
+    --accent-foreground: 145 60% 80%;
+    --soft-blue: 215 30% 14%;
+    --soft-green: 145 30% 14%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 25% 22%;
+    --input: 215 25% 22%;
+    --ring: 200 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-hero { background-image: var(--gradient-hero); }
+  .bg-gradient-soft { background-image: var(--gradient-soft); }
+  .bg-gradient-brand { background-image: var(--gradient-brand); }
+  .shadow-elegant { box-shadow: var(--shadow-md); }
+  .shadow-elevated { box-shadow: var(--shadow-lg); }
+  .transition-base { transition: var(--transition-base); }
+}
